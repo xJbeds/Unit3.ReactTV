@@ -8,21 +8,19 @@ export default function EpisodeList({
   setSelectedEpisode,
 }) {
   return (
-    <>
-      <section className="episodes">
-        <h2>{name}</h2>
-        <ol>
-          {episodes.map((episode) => (
-            <li
-              key={episode.number}
-              onClick={() => setSelectedEpisode(episode)}
-              className={episode === selectedEpisode ? "selected" : ""}
-            >
-              {episode.title}
-            </li>
-          ))}
-        </ol>
-      </section>
-    </>
+    <section className="episodes">
+      <h2>{name}</h2>
+      <ol>
+        {episodes.map((episode) => (
+          <li
+            key={episode.number}
+            onClick={() => setSelectedEpisode(episode)}
+            className={episode === selectedEpisode ? "selected" : ""}
+          >
+            {episode.title}
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

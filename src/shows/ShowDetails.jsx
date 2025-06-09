@@ -13,12 +13,12 @@ export default function ShowDetails({ show }) {
   return (
     <div className="show-details">
       <EpisodeList
-        name={name}
-        episodes={episodes}
+        name={show.name}
+        episodes={show.episodes}
         selectedEpisode={selectedEpisode}
         setSelectedEpisode={setSelectedEpisode}
       />
-      <EpisodeDetails episodes={episodes} />
+      <EpisodeDetails episode={selectedEpisode} />
     </div>
   );
 }

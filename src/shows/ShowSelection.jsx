@@ -6,7 +6,7 @@ export default function ShowSelection({ shows, setSelectedShow }) {
     <nav className="shows">
       <ul>
         {shows.map((show) => {
-          return <li onClick={() => setSelectedShow(show)}>{show.title}</li>;
+          return <li onClick={() => setSelectedShow(show)}>{show.name}</li>;
         })}
       </ul>
     </nav>
